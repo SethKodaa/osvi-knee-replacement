@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Knee Replacement | OSVI</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://osvi.com.au/wp-content/themes/hello-elementor/style.css"/>
+  <link rel="stylesheet" href="https://osvi.com.au/wp-content/themes/hello-theme-child-master/style.css"/>
+</head>
+<body>
+
+  <!-- HEADER (from OSVI) -->
+  <header>
+    <iframe src="https://osvi.com.au" style="height:0;width:0;position:absolute;border:0"></iframe>
+    <div id="osvi-header"></div>
+    <script>
+      fetch("https://osvi.com.au")
+        .then(response => response.text())
+        .then(html => {
+          const doc = new DOMParser().parseFromString(html, "text/html");
+          const header = doc.querySelector("header");
+          document.getElementById("osvi-header").innerHTML = header ? header.outerHTML : "";
+        });
+    </script>
+  </header>
+
+  <!-- MAIN CONTENT (from Corin Group) -->
+  <main class="content-wrapper">
+    <h1>Knee Replacement</h1>
+    <p>
+      Knee replacement is a procedure carried out to relieve pain and restore function in severely diseased knee joints. 
+      Patients typically undergo this treatment when other non-surgical options have failed. 
+      The procedure involves replacing damaged joint surfaces with prosthetic components, enabling improved mobility and reduced discomfort.
+    </p>
+    <h2>What to Expect</h2>
+    <p>
+      Patients undergoing knee replacement will typically spend several days in hospital, followed by a period of rehabilitation.
+      Physical therapy is critical to ensure proper joint movement and a successful recovery.
+    </p>
+    <h2>Corin Group Technology</h2>
+    <p>
+      Corin Group offers advanced solutions including robotic-assisted procedures and personalized implant alignment to improve outcomes.
+      Their innovations aim to extend implant lifespan and increase surgical precision.
+    </p>
+    <a href="https://www.coringroup.com/patients/knee-replacement/" target="_blank">View original on Corin Group</a>
+  </main>
+
+  <!-- FOOTER (from OSVI) -->
+  <footer>
+    <div id="osvi-footer"></div>
+    <script>
+      fetch("https://osvi.com.au")
+        .then(response => response.text())
+        .then(html => {
+          const doc = new DOMParser().parseFromString(html, "text/html");
+          const footer = doc.querySelector("footer");
+          document.getElementById("osvi-footer").innerHTML = footer ? footer.outerHTML : "";
+        });
+    </script>
+  </footer>
+
+</body>
+</html>
