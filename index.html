@@ -5,27 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Knee Replacement | OSVI</title>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://osvi.com.au/wp-content/themes/hello-elementor/style.css"/>
-  <link rel="stylesheet" href="https://osvi.com.au/wp-content/themes/hello-theme-child-master/style.css"/>
 </head>
 <body>
 
-  <!-- HEADER (from OSVI) -->
-  <header>
-    <iframe src="https://osvi.com.au" style="height:0;width:0;position:absolute;border:0"></iframe>
-    <div id="osvi-header"></div>
-    <script>
-      fetch("https://osvi.com.au")
-        .then(response => response.text())
-        .then(html => {
-          const doc = new DOMParser().parseFromString(html, "text/html");
-          const header = doc.querySelector("header");
-          document.getElementById("osvi-header").innerHTML = header ? header.outerHTML : "";
-        });
-    </script>
+  <!-- HEADER (linked to OSVI.com.au) -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://osvi.com.au" class="logo">OSVI</a>
+      <nav class="main-nav">
+        <a href="https://osvi.com.au/about-us/">About Us</a>
+        <a href="https://osvi.com.au/services/">Services</a>
+        <a href="https://osvi.com.au/patient-info/">Patient Info</a>
+        <a href="https://osvi.com.au/contact/">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- MAIN CONTENT (from Corin Group) -->
+  <!-- MAIN CONTENT -->
   <main class="content-wrapper">
     <h1>Knee Replacement</h1>
     <p>
@@ -46,18 +42,15 @@
     <a href="https://www.coringroup.com/patients/knee-replacement/" target="_blank">View original on Corin Group</a>
   </main>
 
-  <!-- FOOTER (from OSVI) -->
-  <footer>
-    <div id="osvi-footer"></div>
-    <script>
-      fetch("https://osvi.com.au")
-        .then(response => response.text())
-        .then(html => {
-          const doc = new DOMParser().parseFromString(html, "text/html");
-          const footer = doc.querySelector("footer");
-          document.getElementById("osvi-footer").innerHTML = footer ? footer.outerHTML : "";
-        });
-    </script>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2025 OSVI. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="https://osvi.com.au/privacy-policy/">Privacy Policy</a>
+        <a href="https://osvi.com.au/contact/">Contact</a>
+      </nav>
+    </div>
   </footer>
 
 </body>
